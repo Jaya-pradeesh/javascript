@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: aqua;
+        }
+        .container{
+            position: relative;
+        }
+        .container .center{
+            position: fixed;
+            width: 300px;
+            height: 300px;
+            background-color: black;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -webkit-transform: translate(-50%, -50%);
+            color: rgb(246, 11, 11);
+            font-weight: bold;
+            text-decoration-color: red;
+            padding: 30px;
+            column-gap: 1ch;
+            
+
+            
+        }
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        #age{
+            width: 20%;
+            margin-left: 8.9%;
+            display: inline-block;
+        }
+        H1{
+            margin-left: 95%;
+            color: red;
+           font-size: small;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="center">
+            <form>Name:
+                <input type="text" placeholder="Enter name">
+                Age:<input type="number" id="age">
+                <br>
+                Email:<input type="email" placeholder="Enter Email" style="margin-left: 3%; width: 64%;">
+                
+            </form>
+
+        </div>
+    </div>
+    <h1>HOME</h1>
+    
+</body>
+</html>

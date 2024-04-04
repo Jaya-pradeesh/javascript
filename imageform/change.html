@@ -1,0 +1,357 @@
+ <!-- <input type="text" id="int" placeholder="enter  Value">
+<button onclick="change()">Click</button>
+<p id="para">Entered value will be displayed here</p>
+
+<script>
+    var head=document.getElementById("int")
+    var second=document.getElementById("para")
+    function change(){
+        second.textContent="Entered Value:"+ head.value
+    }
+</script>
+ -->
+
+ <!-- <input type="text" id="input1">
+ <input type="text" id="input2">
+ <button onclick="add()">Add</button>
+ <p id="result"></p>
+
+ <script>
+    var input1=document.getElementById("input1")
+    var input2=document.getElementById("input2")
+    var result=document.getElementById("result")
+
+    function add(){
+        result.textContent=Number(input1.value)+Number(input2.value)
+    }
+
+
+ </script> -->
+
+ <!-- <input type="text" id="input">
+ <button onclick="check()">submit</button>
+ <p id="result">Right/Wrong</p>
+ <p id="score">your score is:5</p>
+
+ <script>
+    var input=document.getElementById("input")
+    var result=document.getElementById("result")
+    var total=5
+    var score =document.getElementById("score")
+    function check(){
+        
+        
+        var random=Math.ceil(Math.random()*10)
+        console.log(random)
+        if(random==input.value){
+            result.textContent="Right"
+        }
+        else{
+            total=total-1
+            result.textContent="wrong"
+            if (total<=0){
+                input.disabled=true
+            }
+        }
+        score.textContent="your score is "+total
+    }
+ </script> -->
+
+ <!-- <style>
+    #hello{
+        color: red;
+    }
+ </style>
+ <h1 id="hello">Hello</h1>
+ <button onclick="change()">change</button>
+
+ <script>
+    var hello=document.getElementById("hello")
+    function change(){
+        hello.style.color=""
+    }
+ </script> -->
+
+ <!-- <img id="image" src="https://source.unsplash.com/220x220/?pig">
+ <button onclick="change()">change</button>
+ <script>
+    function change(){
+        var image=document.getElementById("image")
+        image.setAttribute("src","https://source.unsplash.com/220x220/?cat")
+
+
+    }
+ </script> -->
+
+ <!-- <div id="box">
+    <p>hello</p>
+ </div>
+ <button onclick="change()">change</button>
+ <script>
+    var box=document.getElementById("box")
+    function change(){
+        box.textContent="<h1>helllo</h1>"
+        box.innerHTML="<h1>helllo</h1>"
+        
+        console.log(box.textContent)
+        console.log(box.innerHTML)
+        console.log(box.innerText) 
+    }
+ </script> -->
+ <!-- <p id="helo">hhhhhh</p>
+ <button onclick="append()">change</button>
+ <script>
+    function append(){
+        var helo=document.getElementById("helo")
+        helo.append("hii")
+    }
+ </script> -->
+
+ <!-- <input type="text" id="get" >
+ <button onclick="addon()">add list element</button>
+ <ul id="hello" >
+
+ </ul>
+ <script>
+    var container = document.getElementById("hello")
+    var get=document.getElementById("get")
+    function addon(){
+        var addelement=document.createElement("li")
+        addelement.textContent=get.value
+        container.append(addelement)
+        get.value=""
+    }
+ </script>
+ 
+ <h1 onclick="hello(event)">Hello</h1>
+ <h1 onclick="hello(event)">pradeesh</h1>
+ <h1 onclick="hello(event)">nisha</h1>
+ <h1 onclick="hello(event)">ash</h1>
+ <script>
+    function hello(event){
+        event.target.remove()
+    }
+ </script> -->
+
+ <!-- <input type="text" id="input">
+ <button onclick="listelement()">add element</button>
+ <ul id="container">
+    <li>hello <button onclick="remove(event)">Delete</button></li>
+ </ul>
+ <script>
+    var input=document.getElementById("input")
+    var container=document.getElementById("container")
+    function listelement(){
+        var listelement=document.createElement("li")
+        listelement.innerHTML=input.value + "<button onclick=\"remove(event)\">delete</button>"
+        container.append(listelement)
+    }
+    function remove(event){
+        event.target.parentElement.remove()
+    }
+ </script> -->
+
+ <!-- <style>
+    .div{
+        height:200px;
+        width:200px;
+        background-color: black;
+    }
+
+    .red{
+        background-color: red;
+    }
+</style>
+
+<div id="popup" class="div">
+
+</div>
+<button onclick="addcolor()">add</button>
+<button onclick="removecolor()">remove</button>
+
+
+<script>
+    var popup=document.getElementById("popup")
+    function addcolor(){
+        popup.classList.add("red")
+    }
+    function removecolor(){
+        popup.classList.remove("red")
+    }
+
+</script> -->
+
+<!-- <input type="text" id="input" >
+<p id="result"></p>
+
+<script>
+    var input= document.getElementById("input")
+    var result= document.getElementById("result")
+    input.addEventListener("keyup" ,function(){
+        result.textContent=input.value
+    
+    })
+        
+</script> -->
+
+<!-- <h1>JP</h1>
+<button>change</button>
+
+<script>
+    var inputt=document.querySelector("h1")
+    var result=document.querySelector("button")
+    result.addEventListener("click" ,function(){
+        inputt.textContent="JayaPradeesh"
+    })
+</script> -->
+ 
+
+
+<!-- <input type="checkbox" value="c++">C++
+<input type="checkbox" value="Java">Java
+<input type="checkbox" value="python">python
+
+<button >click</button>
+<p>Your skills are:</p>
+
+<script>
+    skills=""
+    var store=document.querySelectorAll("input")
+    var result=document.querySelector("p")
+    var btn=document.querySelector("button")
+
+    btn.addEventListener("click",function(){
+        store.forEach(function(element){
+            if(element.checked==true){
+                skills=skills+element.value+" "
+            }
+        })
+        result.textContent="Your skills are: "+skills
+    })
+</script> -->
+
+<!-- progressbar -->
+
+<!-- <!DOCTYPE html>
+
+<head>
+    
+    <title>ProgressBar</title>
+    <style>
+        #outerdiv{
+            width: 100%;
+            height: 30px;
+            border: 4px solid black;
+            border-radius: 30px;
+            
+        }
+        #innerdiv{
+            width: 50%;
+            height: inherit;
+            background-color: red;
+            border-radius: inherit;
+            transition: 3s;
+
+
+        }
+        
+
+    </style>
+</head>
+<body>
+    <div id="outerdiv">
+        <div id="innerdiv">
+
+        </div>
+    </div>
+    <br>
+    <input type="text" id="input">
+    <button id="btn">load</button>
+
+    <script>
+        var outer=document.querySelector("#outerdiv")
+        var inner=document.querySelector("#innerdiv")
+        var input=document.querySelector("#input")
+        var btn=document.querySelector("#btn")
+
+        btn.addEventListener("click",function(){
+            inner.style.width=input.value+"%"
+            if(input.value>100){
+                inner.style.width="100%"
+            }
+        })
+
+
+
+    </script>
+
+    
+</body>
+</html> -->
+
+<!-- <input type="text" id="input">
+<h1>JayaPradeesh</h1>
+<h1>aakash</h1>
+<h1>ramesh</h1>
+<h1>raja</h1>
+<h1>jacob</h1>
+<h1>zero</h1>
+
+<script>
+    var input=document.getElementById("input")
+    var obj=document.querySelectorAll("h1")
+    input.addEventListener("keyup", function(){
+         var Enteredvalue=input.value.toLowerCase()
+         obj.forEach(function(element){
+            elementtext=element.textContent.toLowerCase()
+            if(elementtext.indexOf(Enteredvalue)<0){
+                element.style.display="none"
+            }
+            else{
+                element.style.display="block"
+            }
+         })
+    })
+</script> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        div{
+            height: 200px;
+            background-color: red;
+            opacity: 0;
+            transition: 4s;
+            color: white;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+        }
+    </style>
+    <p style="text-align: justify;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit deserunt dolores non earum molestias mollitia explicabo quisquam consequatur aspernatur quo. Impedit dignissimos quas rerum voluptatem, molestias temporibus, reprehenderit sequi exercitationem commodi ipsam rem dolorem aliquam animi corrupti quae fugiat! Repudiandae facilis similique aspernatur quas magni et debitis id necessitatibus provident, deleniti eius ad totam cum incidunt minus, alias, assumenda accusantium est ab saepe. Aperiam, sapiente debitis facilis provident veniam quasi obcaecati suscipit tenetur fugit laboriosam voluptatum est harum architecto at, recusandae quidem dolor optio non nobis accusantium laudantium? Nesciunt alias iure quidem veritatis quisquam delectus atque maiores officiis, sequi accusantium at ex doloremque unde vitae. Numquam quo quia facere sint eligendi voluptatem! Amet pariatur consequatur maiores. Autem inventore illo sunt alias ab, provident commodi in, ea, delectus exercitationem explicabo aut. Fuga, iusto, ipsum quasi velit voluptatibus temporibus rem totam at, ratione similique odio aut. Molestiae perspiciatis, maxime dolores distinctio, error eius voluptate quidem ullam deleniti accusamus quod recusandae tempora asperiores placeat corrupti reprehenderit eveniet totam deserunt, autem quam cupiditate veniam culpa voluptatum! Porro tenetur error amet assumenda maiores, ipsum commodi tempora voluptatum unde quos. Ducimus facere consequuntur cumque reprehenderit numquam, iure animi iusto aliquid magnam ea ad assumenda consequatur sequi eius dolore sint officiis harum fuga tenetur. Iusto, commodi itaque eius aspernatur odit laudantium, debitis, nulla laboriosam ipsum non velit dolore. Libero, repellat deleniti praesentium vitae nihil adipisci provident assumenda hic nam labore nisi deserunt, fuga pariatur facilis mollitia harum? Ipsa, aspernatur quidem dignissimos eum voluptatem repudiandae itaque commodi consectetur exercitationem aliquam ducimus iste esse recusandae molestiae necessitatibus, incidunt corporis fugit explicabo? Corporis recusandae magnam aliquid excepturi earum vel inventore veritatis ad tenetur. Delectus rerum voluptates obcaecati perferendis fugit suscipit eos eligendi pariatur hic animi ipsa est nisi sed quasi sapiente fugiat, ab ullam sequi molestias maiores eveniet quaerat esse quos nihil! Delectus ab atque ipsam adipisci suscipit molestias, nobis dolore nisi sint perspiciatis molestiae, numquam dignissimos vitae odio, provident quibusdam. Voluptates, magni architecto quidem minima voluptatem reiciendis accusamus fuga cupiditate natus dolorum ducimus nam laudantium laborum molestias distinctio! Laboriosam et autem nam eum! Blanditiis excepturi magnam id incidunt, porro placeat, velit explicabo impedit ullam voluptate, earum ducimus ad aut! Cum officiis eum delectus modi nemo numquam at labore omnis, aperiam, ducimus necessitatibus laudantium doloremque incidunt. Quasi explicabo sed sapiente doloribus aliquam molestiae ducimus sunt magnam consequatur itaque, cupiditate quam. Provident molestiae, nulla consequatur distinctio quae libero inventore alias dolore exercitationem porro recusandae error tempore officiis impedit sit ipsam quo nemo perferendis doloribus quod fugiat unde omnis enim iure. Delectus velit, fugit minima commodi iusto dolorem, enim veniam est, accusantium inventore consequatur nostrum saepe! Eum odit ipsam non commodi architecto deleniti ex mollitia excepturi autem porro! Maxime sapiente saepe veniam omnis aperiam dicta vitae vel, quae unde rem at doloribus modi repudiandae velit rerum debitis, voluptas a excepturi perspiciatis nemo quas voluptate voluptatum! Ex error quaerat ab nisi beatae obcaecati quisquam eveniet facere temporibus? Hic saepe excepturi ex cumque soluta natus necessitatibus voluptatum ut voluptate unde expedita ipsam pariatur eaque, suscipit doloribus voluptatibus reiciendis. Itaque quidem nihil obcaecati laborum eligendi, incidunt quae blanditiis nam quis, minima delectus explicabo similique excepturi necessitatibus dignissimos quod in ullam error nobis? Temporibus, quia quasi magni odit voluptates perferendis sapiente ullam tenetur natus quod eos similique inventore ea vitae, aliquid facilis. Sit dolor, blanditiis qui iure amet voluptatem quos repellat porro provident asperiores distinctio ab necessitatibus rem dolorum recusandae facere officia. Aspernatur, veritatis? Sapiente id, omnis tempora quas praesentium est fugiat quia ab harum, repellendus iure earum unde nulla veritatis autem excepturi porro magnam illum eius alias esse ipsam pariatur a debitis? Suscipit quis blanditiis, sapiente laborum aliquid dicta! Amet vero quas velit iste necessitatibus perspiciatis laborum, nam illum. Repudiandae, harum? Facere voluptatem dolorum mollitia? Inventore saepe aliquam sapiente quibusdam officiis accusamus quaerat natus delectus ullam iure, ad corrupti assumenda quidem commodi? Esse maiores nostrum reiciendis assumenda ipsum dolorum quasi asperiores aspernatur rem dicta vero aut sapiente animi, quisquam numquam veniam odio nihil culpa modi exercitationem perspiciatis maxime unde quos. Pariatur, cum! Nam, eligendi ex fugiat deleniti, odit doloribus magnam facere debitis facilis, corporis ipsum excepturi fuga officiis neque non dicta consequatur! Minima quibusdam dignissimos unde molestias sequi ad accusantium sint tenetur natus dicta nisi eum voluptatibus necessitatibus veniam in quod magni, consequatur fugit nemo? Soluta reprehenderit cupiditate nesciunt saepe totam dolor facilis, accusantium impedit consequatur quas blanditiis minus odit mollitia quasi rerum debitis laudantium natus enim aperiam consectetur, laboriosam sapiente aliquid harum? Maxime eveniet et non ea, aspernatur culpa quam deserunt cupiditate nesciunt maiores, aliquam iste iure eos, nulla exercitationem aut explicabo delectus velit illum excepturi ducimus. Illum neque perferendis itaque fuga similique. Eius, quam nam? Cupiditate deleniti numquam nesciunt alias earum eius nobis quaerat eligendi, iste sunt nam maxime corrupti architecto doloribus, nisi ratione fugit impedit quas debitis. Quia enim dolores blanditiis! Fugit maxime, soluta consectetur voluptatem omnis ut nisi quidem eum corrupti ab accusamus amet autem recusandae maiores error enim velit adipisci est temporibus esse sapiente tenetur numquam quos. Vitae ullam fugiat, ea animi labore quis eaque voluptatibus deserunt autem neque tempore? Culpa doloribus magnam incidunt excepturi maxime nam architecto? Fugiat consequuntur doloremque pariatur saepe repudiandae laudantium optio soluta corrupti nulla voluptatum. Labore repellendus, at cupiditate ad tempore incidunt officia earum vero placeat eaque, beatae dolor. Fugit iure quasi eos asperiores magni! Recusandae exercitationem pariatur earum quo perferendis eum accusamus quaerat est ipsam excepturi sapiente voluptatum asperiores, cumque sit iste eaque nemo autem dolor soluta, dolorem suscipit repudiandae reprehenderit iusto voluptatem. Id laborum numquam culpa reprehenderit libero maiores eveniet in porro mollitia aliquam? Veritatis in sit, voluptate nobis consequuntur quo alias odit ea excepturi doloribus aspernatur voluptatem deserunt omnis, nisi sunt architecto enim eveniet, facilis possimus? Enim ab accusantium, porro eligendi non soluta labore. Eligendi repellendus quod eaque cum modi animi corrupti, facilis officiis, optio, assumenda labore sint natus doloremque! Numquam qui reiciendis eaque aspernatur, consectetur, cumque ipsa repudiandae tempora magnam alias harum accusamus. Obcaecati error iusto exercitationem accusamus magnam distinctio, eaque reprehenderit quisquam, perspiciatis ab totam repellendus veniam facere ut perferendis!</p>
+    <div id="box">
+        <h1>hello world</h1>
+
+    </div>
+
+    <p style="text-align: justify;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure nemo voluptas doloremque sed quae incidunt. Reiciendis eligendi commodi iste laboriosam alias, obcaecati id sapiente illo suscipit aliquid, ducimus deserunt atque dignissimos! Cum rem praesentium eaque! Repellat assumenda, reiciendis fugit consequuntur ut dolorem animi, tenetur nisi aspernatur voluptas vel cupiditate nulla deserunt necessitatibus debitis hic voluptatem, odit minus ea nobis? Ipsum adipisci et repudiandae assumenda necessitatibus explicabo veritatis fugiat magnam quis numquam, reiciendis, repellat dolorum laudantium voluptatum inventore unde optio. Est aperiam adipisci nulla totam. Cum delectus animi, sequi officia veniam commodi quibusdam. Numquam quia nihil sed odio, dicta cumque temporibus molestiae rerum nostrum accusantium labore soluta minus, sunt sapiente in praesentium eum et. Distinctio numquam totam suscipit nobis. Earum modi veritatis dolore qui quibusdam facilis ratione optio similique nam aspernatur omnis voluptates quidem blanditiis dolor eligendi deleniti itaque ex nostrum, voluptatum fugit dicta illum ea ipsa cupiditate. Esse similique tempora, ipsa itaque quasi ex, eos corporis quaerat hic vel rem, magnam consectetur! Consequatur velit ut necessitatibus omnis. Rerum aut fugit explicabo eum iusto, cum tenetur ullam earum mollitia nobis, illo nemo id quibusdam magni praesentium nostrum, tempore necessitatibus quidem! Iusto mollitia ut maxime numquam earum illum, vitae quos laborum at consequatur inventore vero laudantium quibusdam quo atque! Veniam culpa molestias accusantium architecto ipsam non laudantium, dolor vero fuga accusamus earum sequi, quod ea odio cupiditate a quam quas consequuntur ratione quos assumenda. Minima sunt eaque aliquam totam recusandae adipisci asperiores quis? Quam officiis maiores amet quos cupiditate, numquam corporis at non voluptatem molestias quidem recusandae iure nisi corrupti perferendis aspernatur quod quisquam sunt, totam reiciendis laboriosam et! Iure, officiis! Mollitia deleniti possimus dolor quae aspernatur voluptate. Odit est beatae sint nihil consectetur, rem dicta unde voluptatem quas architecto autem esse eum delectus veniam, necessitatibus doloremque ratione. Quisquam delectus, vel, impedit necessitatibus eligendi ipsum dolor tempore quae minima iusto dolore dignissimos, soluta odio dolorem ad culpa sint hic magnam vitae repellendus id! Saepe dolor aliquid, fugit, sapiente, id harum reprehenderit esse consectetur dolorum velit officiis suscipit itaque ab error expedita incidunt pariatur vitae adipisci? Enim, non fugit officiis at ratione facere pariatur quis ex deserunt illo architecto eius hic cupiditate dolore amet voluptas aliquam, magni delectus tempore! Ab itaque odit rem pariatur accusantium possimus officia iure, voluptatibus quo maxime consequuntur consequatur neque sequi saepe mollitia ea minus corrupti libero aut quaerat, dolorem quas, maiores asperiores quos. Necessitatibus aliquid iste officia numquam aperiam dolor repudiandae, ad repellat illum voluptatibus minus nulla qui tenetur illo nesciunt animi, nemo assumenda. Maiores, amet? Nobis delectus fuga in nam ipsam perspiciatis blanditiis adipisci ab autem distinctio sed quasi, incidunt natus accusantium. Qui reprehenderit illo id odio molestiae debitis at necessitatibus architecto vitae facilis, corrupti, nihil corporis cupiditate possimus distinctio accusamus beatae labore culpa quibusdam alias, pariatur commodi laudantium? Officiis aliquid rerum labore quod voluptatem. Commodi nobis voluptatum enim fuga, amet, beatae ea non repellat, consectetur iusto mollitia quam exercitationem laboriosam nulla aliquid sed? Iusto culpa debitis ut excepturi reiciendis, praesentium iure dignissimos ullam, tenetur quisquam et?</p>
+    <script>
+       var box=document.getElementById("box")
+       window.addEventListener("scroll",function(){
+        windowheight=window.innerHeight
+        console.log(windowheight)
+        boxheight=box.getBoundingClientRect().top
+        if(boxheight<windowheight){
+            box.style.opacity=1
+        }
+        else if(boxheight>windowheight){
+            box.style.opacity=0
+        }
+       })
+    </script>
+</body>
+</html>
